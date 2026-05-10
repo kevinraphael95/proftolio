@@ -48,7 +48,7 @@ const PROJECTS = [
   {
     id: "kevinscale",
     title: "Kévinscale",
-    desc: "Parodie du PolitiScale — réponds à des questions pour voir si tu as la même idéologie que moi.",
+    desc: "Version custom de PolitiScale.",
     emoji: "📊",
     tags: ["test"],
     github: "https://github.com/kevinraphael95/kevinscale",
@@ -58,7 +58,7 @@ const PROJECTS = [
   },
   {
     id: "kisuke",
-    title: "Bot Kisuke Urahara",
+    title: "Bot Discord Kisuke Urahara",
     desc: "Bot Discord inspiré de Bleach — personnalité et commandes dans l'univers de Kisuke Urahara.",
     emoji: "🪭",
     tags: ["bot"],
@@ -69,7 +69,7 @@ const PROJECTS = [
   },
   {
     id: "atem",
-    title: "Bot Atem / Yu-Gi-Oh!",
+    title: "Bot Discord Atem / Yu-Gi-Oh!",
     desc: "Bot Discord inspiré de Yu-Gi-Oh! — commandes, duels et références à l'univers du manga.",
     emoji: "👁️",
     tags: ["bot"],
