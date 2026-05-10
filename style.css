@@ -51,12 +51,15 @@ body.dark {
 /* ============================================================
    BASE
    ============================================================ */
-html, body {
+html {
   min-height: 100%;
   background: var(--bg);
+  transition: background .25s;
+}
+body {
   font-family: var(--font-body);
   color: var(--text);
-  transition: background .25s, color .25s;
+  transition: color .25s;
 }
 
 /* ============================================================
