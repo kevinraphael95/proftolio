@@ -46,12 +46,14 @@ function initTheme() {
   try {
     if (localStorage.getItem("kr_theme") === "dark") {
       document.body.classList.add("dark");
+      document.documentElement.classList.add("dark");
       btn.textContent = "☀️";
     }
   } catch(e) {}
 
   btn.addEventListener("click", () => {
     document.body.classList.toggle("dark");
+    document.documentElement.classList.toggle("dark");
     const dark = document.body.classList.contains("dark");
     btn.textContent = dark ? "☀️" : "🌙";
     try { localStorage.setItem("kr_theme", dark ? "dark" : "light"); } catch(e) {}
