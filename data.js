@@ -4,7 +4,7 @@ const PROJECTS = [
   {
     id: "craftgame",
     title: "Craft Game",
-    desc: "Jeu de craft inspiré d'Infinite Craft — fusionne des éléments pour en découvrir de nouveaux, des quarks jusqu'à l'univers.",
+    desc: "Jeu de craft inspiré d'Infinite Craft — fusionne des trucs pour découvrir des trucs.",
     emoji: "⚗️",
     tags: ["jeu"],
     github: "https://github.com/kevinraphael95/craftgame",
@@ -26,7 +26,7 @@ const PROJECTS = [
   {
     id: "drawword",
     title: "DrawWord",
-    desc: "Jeu / test — dessiner avec des mots une page aléatoire de Wikipedia. Art génératif textuel.",
+    desc: "Jeu — dessiner avec des mots d'une page aléatoire de Wikipedia.",
     emoji: "🖊️",
     tags: ["jeu"],
     github: "https://github.com/kevinraphael95/DRAWWORD",
@@ -59,7 +59,7 @@ const PROJECTS = [
   {
     id: "kisuke",
     title: "Bot Discord Kisuke Urahara",
-    desc: "Bot Discord inspiré de Bleach — personnalité et commandes dans l'univers de Kisuke Urahara.",
+    desc: "Bot Discord inspiré de Bleach.",
     emoji: "🪭",
     tags: ["bot"],
     github: "https://github.com/kevinraphael95/discord_bot_kisuke_urahara",
@@ -70,7 +70,7 @@ const PROJECTS = [
   {
     id: "atem",
     title: "Bot Discord Atem / Yu-Gi-Oh!",
-    desc: "Bot Discord inspiré de Yu-Gi-Oh! — commandes, duels et références à l'univers du manga.",
+    desc: "Bot Discord inspiré de Yu-Gi-Oh!",
     emoji: "👁️",
     tags: ["bot"],
     github: "https://github.com/kevinraphael95/atem_discord_bot",
@@ -81,7 +81,7 @@ const PROJECTS = [
   {
     id: "mhfz",
     title: "Bot Monster Hunter",
-    desc: "Bot Discord Monster Hunter Frontier Z — infos, commandes et références à l'univers MH.",
+    desc: "Bot Discord Monster Hunter Frontier Z.",
     emoji: "⚔️",
     tags: ["bot"],
     github: "https://github.com/kevinraphael95/mhfz",
@@ -92,7 +92,7 @@ const PROJECTS = [
   {
     id: "vaact",
     title: "Cartes YGO — VAACT",
-    desc: "Cartes Yu-Gi-Oh! custom créées pour le projet VAACT. Fan-made, design soigné.",
+    desc: "Cartes Yu-Gi-Oh! custom.",
     emoji: "🃏",
     tags: ["tcg"],
     github: "https://github.com/kevinraphael95/vaact_custom_ygo",
@@ -103,7 +103,7 @@ const PROJECTS = [
   {
     id: "darksouls",
     title: "Cartes YGO — Dark Souls",
-    desc: "Cartes Yu-Gi-Oh! custom à l'univers Dark Souls. Fan-made crossover.",
+    desc: "Cartes Yu-Gi-Oh! custom à l'univers Dark Souls.",
     emoji: "🔥",
     tags: ["tcg"],
     github: "https://github.com/kevinraphael95/darksoulsygo",
