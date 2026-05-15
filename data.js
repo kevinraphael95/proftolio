@@ -13,6 +13,17 @@ const PROJECTS = [
     color: "purple",
   },
   {
+    id: "foresttest",
+    title: "Une forêt",
+    desc: "C'est une forêt.",
+    emoji: "🌳",
+    tags: ["jeu"],
+    github: "https://github.com/kevinraphael95/test3d",
+    site: "https://kevinraphael95.github.io/test3d/index.html",
+    lang: "JS",
+    color: "purple",
+  },
+  {
     id: "tupreferes",
     title: "Tu Préfères",
     desc: "Jeu — choisir entre deux pages Wikipedia aléatoires. Laquelle est la meilleure ?",
