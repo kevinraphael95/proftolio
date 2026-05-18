@@ -122,4 +122,17 @@ const PROJECTS = [
     lang: "Assets",
     color: "red",
   },
+  {
+    id: "notsteam",
+    title: "NotSteam",
+    desc: "C'est pas Steam du tout.",
+    emoji: "🕹️",
+    tags: ["jeu"],
+    github: "https://github.com/kevinraphael95/notsteam",
+    site: "https://kevinraphael95.github.io/notsteam/notsteam.html",
+    lang: "JS",
+    color: "purple",
+  },
+
+  
 ];
