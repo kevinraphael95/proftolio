@@ -4,7 +4,7 @@ const PROJECTS = [
   
   {
     id: "atem",
-    title: "Bot Discord Atem / Yu-Gi-Oh!",
+    title: "Atem / Bot discord Yu-Gi-Oh!",
     desc: "Bot Discord inspiré de Yu-Gi-Oh!",
     emoji: "👁️",
     tags: ["bot"],
@@ -70,7 +70,7 @@ const PROJECTS = [
   },
   {
     id: "kisuke",
-    title: "Bot Discord Kisuke Urahara",
+    title: "Kisuke Urahara / Bot discord ",
     desc: "Bot Discord inspiré de Bleach.",
     emoji: "🪭",
     tags: ["bot"],
