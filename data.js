@@ -26,7 +26,7 @@ const PROJECTS = [
   },
   {
     id: "darksouls",
-    title: "Cartes YGO — Dark Souls",
+    title: "Dark Souls / Cartes YGO",
     desc: "Cartes Yu-Gi-Oh! custom à l'univers Dark Souls.",
     emoji: "🔥",
     tags: ["tcg"],
@@ -114,7 +114,7 @@ const PROJECTS = [
   },
   {
     id: "vaact",
-    title: "Cartes YGO — VAACT",
+    title: "VAACT / Cartes YGO",
     desc: "Cartes Yu-Gi-Oh! custom.",
     emoji: "🃏",
     tags: ["tcg"],
