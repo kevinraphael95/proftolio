@@ -81,7 +81,7 @@ const PROJECTS = [
   },
   {
     id: "mhfz",
-    title: "Bot Monster Hunter",
+    title: "Monster Hunter / Bot Discord",
     desc: "Bot Discord Monster Hunter Frontier Z.",
     emoji: "⚔️",
     tags: ["bot"],
