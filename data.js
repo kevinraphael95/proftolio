@@ -58,6 +58,17 @@ const PROJECTS = [
     color: "purple",
   },
   {
+    id: "jardin",
+    title: "Jardin",
+    desc: "Des fleurs.",
+    emoji: "🌼",
+    tags: ["jeu"],
+    github: "https://github.com/kevinraphael95/jardin",
+    site: "https://kevinraphael95.github.io/jardin/jaridn.html",
+    lang: "JS",
+    color: "purple",
+  },
+  {
     id: "kevinscale",
     title: "Kévinscale",
     desc: "Version custom de PolitiScale.",
