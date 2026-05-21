@@ -14,6 +14,17 @@ const PROJECTS = [
     color: "amber",
   },
   {
+    id: "captcha",
+    title: "Captcha",
+    desc: "Captcha",
+    emoji: "🗿",
+    tags: ["jeu"],
+    github: "https://github.com/kevinraphael95/captcha",
+    site: "https://kevinraphael95.github.io/captcha/captcha.html",
+    lang: "JS",
+    color: "purple",
+  },
+  {
     id: "craftgame",
     title: "Craft Game",
     desc: "Jeu de craft inspiré d'Infinite Craft — fusionne des trucs pour découvrir des trucs.",
