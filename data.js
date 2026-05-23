@@ -163,7 +163,7 @@ const PROJECTS = [
     emoji: "🌀",
     tags: ["jeu", "tcg"],
     github: "https://github.com/kevinraphael95/wikitcg",
-    site: "https://kevinraphael95.github.io/wikitcg/wikitcg.html",
+    site: "https://kevinraphael95.github.io/wikitcg/index.html",
     lang: "JS",
     color: "blue",
   },
