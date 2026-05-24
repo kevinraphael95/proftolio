@@ -84,7 +84,7 @@ function renderCards(projects) {
         <div class="card-emoji">${p.emoji}</div>
         <div class="card-title-wrap">
           <div class="card-title">${p.title}</div>
-          <span class="card-lang">${p.lang}</span>
+          <span class="card-tags-top">${p.tags.join(" · ")}</span>
         </div>
       </div>
       <p class="card-desc">${p.desc}</p>
@@ -92,13 +92,14 @@ function renderCards(projects) {
       <div class="card-links">
         <a href="${p.github}" target="_blank" class="btn">⌥ GitHub</a>
         ${siteBtn}
-      </div>
+      </div>    
+      <div class="card-status">${p.status}</div>
     `;
 
     grid.appendChild(card);
   });
 
-  document.getElementById("count").textContent = projects.length;
+  document.getElementById("count").textContent = PROJECTS.length;
 }
 
 // ============================================================
