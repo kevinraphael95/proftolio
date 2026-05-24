@@ -14,7 +14,7 @@ function initBg() {
   (function draw() {
     ctx.clearRect(0, 0, W, H);
     ctx.fillStyle = document.body.classList.contains("dark")
-      ? "rgba(99,120,248,0.4)" : "rgba(91,69,214,0.18)";
+      ? "rgba(120,140,255,0.18)" : "rgba(91,69,214,0.10)";
     const cw = W/COLS, ch = H/ROWS;
     for (let r=0; r<=ROWS; r++) for (let c=0; c<=COLS; c++) {
       const w = Math.sin(c*FREQ + r*FREQ*0.7 + t)*AMP + Math.sin(c*FREQ*0.5 - r*FREQ*1.2 + t*0.8)*AMP*0.5;
