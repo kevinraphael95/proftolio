@@ -1,3 +1,11 @@
+/* états */
+/*
+fonctionnel
+en travaux
+test
+abandonné
+*/
+
 'use strict';
 
 const PROJECTS = [
@@ -10,7 +18,7 @@ const PROJECTS = [
     tags: ["bot"],
     github: "https://github.com/kevinraphael95/atem_discord_bot",
     site: "https://kevinraphael95.github.io/atem_discord_bot/index.html",
-    status: "fonctionnel",
+    status: "en travaux",
     color: "amber",
   },
   {
@@ -21,7 +29,7 @@ const PROJECTS = [
     tags: ["jeu"],
     github: "https://github.com/kevinraphael95/captcha",
     site: "https://kevinraphael95.github.io/captcha/captcha.html",
-    status: "fonctionnel",
+    status: "test",
     color: "purple",
   },
   {
@@ -32,7 +40,7 @@ const PROJECTS = [
     tags: ["jeu"],
     github: "https://github.com/kevinraphael95/craftgame",
     site: "https://kevinraphael95.github.io/craftgame/index.html",
-    status: "fonctionnel",
+    status: "en travaux",
     color: "purple",
   },
   {
@@ -43,7 +51,7 @@ const PROJECTS = [
     tags: ["tcg"],
     github: "https://github.com/kevinraphael95/darksoulsygo",
     site: null,
-    status: "fonctionnel",
+    status: "abandonné",
     color: "red",
   },
   {
@@ -54,7 +62,7 @@ const PROJECTS = [
     tags: ["jeu"],
     github: "https://github.com/kevinraphael95/DRAWWORD",
     site: "https://kevinraphael95.github.io/DRAWWORD/index.html",
-    status: "fonctionnel",
+    status: "test",
     color: "amber",
   },
   {
@@ -65,7 +73,7 @@ const PROJECTS = [
     tags: ["jeu"],
     github: "https://github.com/kevinraphael95/forest",
     site: "https://kevinraphael95.github.io/forest/index.html",
-    status: "fonctionnel",
+    status: "en travaux",
     color: "purple",
   },
   {
@@ -76,7 +84,7 @@ const PROJECTS = [
     tags: ["jeu"],
     github: "https://github.com/kevinraphael95/jardin",
     site: "https://kevinraphael95.github.io/jardin/jaridn.html",
-    status: "fonctionnel",
+    status: "test",
     color: "purple",
   },
   {
@@ -98,7 +106,7 @@ const PROJECTS = [
     tags: ["bot"],
     github: "https://github.com/kevinraphael95/discord_bot_kisuke_urahara",
     site: "https://kevinraphael95.github.io/discord_bot_kisuke_urahara/",
-    status: "fonctionnel",
+    status: "en travaux",
     color: "teal",
   },
   {
@@ -120,7 +128,7 @@ const PROJECTS = [
     tags: ["jeu"],
     github: "https://github.com/kevinraphael95/notsteam",
     site: "https://kevinraphael95.github.io/notsteam/notsteam.html",
-    status: "fonctionnel",
+    status: "en travaux",
     color: "purple",
   },
   {
@@ -131,7 +139,7 @@ const PROJECTS = [
     tags: ["jeu"],
     github: "https://github.com/kevinraphael95/tupreferes",
     site: "https://kevinraphael95.github.io/tupreferes/wiki-prefer.html",
-    status: "fonctionnel",
+    status: "en travaux",
     color: "teal",
   },
   {
@@ -142,7 +150,7 @@ const PROJECTS = [
     tags: ["tcg"],
     github: "https://github.com/kevinraphael95/vaact_custom_ygo",
     site: null,
-    status: "fonctionnel",
+    status: "abandonné",
     color: "purple",
   },
   {
@@ -164,7 +172,7 @@ const PROJECTS = [
     tags: ["jeu", "tcg"],
     github: "https://github.com/kevinraphael95/wikitcg",
     site: "https://kevinraphael95.github.io/wikitcg/index.html",
-    status: "fonctionnel",
+    status: "test",
     color: "blue",
   },
 
