@@ -7,7 +7,7 @@
   --font-display:'Space Grotesk', sans-serif;
   --bg:      #f5f2ed; --surface:  #fff;
   --border:  #e4e0d8; --border2:  #ccc8be;
-  --text:    #0a0905; --muted:    #6b6760;
+  --text:    #0a0905; --muted:    #4a4743;
   --accent:  #5b45d6; --accent2:  #7c6af0;
   --shadow:  rgba(0,0,0,.07);
 
@@ -32,9 +32,9 @@
 }
 
 html.dark,body.dark {
-  --bg:     #0e1117; --surface: #131720;
-  --border: rgba(99,120,200,.15); --border2:rgba(99,120,200,.3);
-  --text:   #f0f4ff; --muted:   #9aa5c4;
+  --bg:     #161b27; --surface: #1e2535;
+  --border: rgba(99,120,200,.2); --border2:rgba(99,120,200,.38);
+  --text:   #eef1ff; --muted:   #a8b3cc;
   --accent: #6366f1; --accent2: #818cf8;
   --shadow: rgba(0,0,0,.4);
 
