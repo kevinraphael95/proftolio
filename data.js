@@ -32,7 +32,7 @@ const PROJECTS = [
     tags: ["jeu"],
     github: "https://github.com/kevinraphael95/craftgame",
     site: "https://kevinraphael95.github.io/craftgame/index.html",
-    status: "fonctionnel"
+    status: "fonctionnel",
     color: "purple",
   },
   {
@@ -43,7 +43,7 @@ const PROJECTS = [
     tags: ["tcg"],
     github: "https://github.com/kevinraphael95/darksoulsygo",
     site: null,
-    status: "fonctionnel"
+    status: "fonctionnel",
     color: "red",
   },
   {
@@ -54,7 +54,7 @@ const PROJECTS = [
     tags: ["jeu"],
     github: "https://github.com/kevinraphael95/DRAWWORD",
     site: "https://kevinraphael95.github.io/DRAWWORD/index.html",
-    status: "fonctionnel"
+    status: "fonctionnel",
     color: "amber",
   },
   {
@@ -65,7 +65,7 @@ const PROJECTS = [
     tags: ["jeu"],
     github: "https://github.com/kevinraphael95/forest",
     site: "https://kevinraphael95.github.io/forest/index.html",
-    status: "fonctionnel"
+    status: "fonctionnel",
     color: "purple",
   },
   {
@@ -76,7 +76,7 @@ const PROJECTS = [
     tags: ["jeu"],
     github: "https://github.com/kevinraphael95/jardin",
     site: "https://kevinraphael95.github.io/jardin/jaridn.html",
-    status: "fonctionnel"
+    status: "fonctionnel",
     color: "purple",
   },
   {
@@ -87,7 +87,7 @@ const PROJECTS = [
     tags: ["quizz"],
     github: "https://github.com/kevinraphael95/kevinscale",
     site: "https://kevinraphael95.github.io/kevinscale/",
-    status: "fonctionnel"
+    status: "fonctionnel",
     color: "coral",
   },
   {
@@ -120,7 +120,7 @@ const PROJECTS = [
     tags: ["jeu"],
     github: "https://github.com/kevinraphael95/notsteam",
     site: "https://kevinraphael95.github.io/notsteam/notsteam.html",
-    status: "fonctionnel"
+    status: "fonctionnel",
     color: "purple",
   },
   {
@@ -131,7 +131,7 @@ const PROJECTS = [
     tags: ["jeu"],
     github: "https://github.com/kevinraphael95/tupreferes",
     site: "https://kevinraphael95.github.io/tupreferes/wiki-prefer.html",
-    status: "fonctionnel"
+    status: "fonctionnel",
     color: "teal",
   },
   {
@@ -142,7 +142,7 @@ const PROJECTS = [
     tags: ["tcg"],
     github: "https://github.com/kevinraphael95/vaact_custom_ygo",
     site: null,
-    status: "fonctionnel"
+    status: "fonctionnel",
     color: "purple",
   },
   {
@@ -164,7 +164,7 @@ const PROJECTS = [
     tags: ["jeu", "tcg"],
     github: "https://github.com/kevinraphael95/wikitcg",
     site: "https://kevinraphael95.github.io/wikitcg/index.html",
-    status: "fonctionnel"
+    status: "fonctionnel",
     color: "blue",
   },
 
