@@ -218,3 +218,16 @@ footer { margin-top: 48px; text-align: center; font-size: .72rem; color: var(--m
   .card-links { flex-wrap: nowrap; overflow: hidden; }
   .btn { padding: 7px 8px; font-size: .7rem; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 }
+
+.card-tags-top {
+  display: inline-block;
+  font-size: .6rem;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 20px;
+  margin-top: 4px;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  background: var(--border);
+  color: var(--muted);
+}
