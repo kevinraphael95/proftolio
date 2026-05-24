@@ -21,7 +21,7 @@ const PROJECTS = [
     tags: ["jeu"],
     github: "https://github.com/kevinraphael95/captcha",
     site: "https://kevinraphael95.github.io/captcha/captcha.html",
-    status: "fonctionnel"
+    status: "fonctionnel",
     color: "purple",
   },
   {
