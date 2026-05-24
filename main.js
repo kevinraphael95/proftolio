@@ -1,86 +1,150 @@
 'use strict';
 
-let active = "all";
-let search = "";
+// ============================================================
+// CANVAS BG ONDULANT
+// ============================================================
+function initBg() {
+  const canvas = document.getElementById("bg-canvas");
+  const ctx = canvas.getContext("2d");
+  let W, H, t = 0;
+  const COLS = 30, ROWS = 20, AMP = 6, FREQ = 0.16, SPEED = 0.016;
 
-const grid = document.getElementById("grid");
-const empty = document.getElementById("empty");
-const count = document.getElementById("count");
+  function resize() {
+    W = canvas.width  = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener("resize", resize);
 
-function debounce(fn, delay = 150) {
-  let t;
-  return (...args) => {
-    clearTimeout(t);
-    t = setTimeout(() => fn(...args), delay);
-  };
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+    const dark = document.body.classList.contains("dark");
+    ctx.fillStyle = dark ? "rgba(99,120,248,0.4)" : "rgba(91,69,214,0.18)";
+    const cw = W / COLS, ch = H / ROWS;
+    for (let r = 0; r <= ROWS; r++) {
+      for (let c = 0; c <= COLS; c++) {
+        const wave = Math.sin(c * FREQ + r * FREQ * 0.7 + t) * AMP
+                   + Math.sin(c * FREQ * 0.5 - r * FREQ * 1.2 + t * 0.8) * AMP * 0.5;
+        const x = c * cw + wave;
+        const y = r * ch + wave * 0.6;
+        ctx.beginPath();
+        ctx.arc(x, y, dark ? 1.3 : 1.0, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+    t += SPEED;
+    requestAnimationFrame(draw);
+  }
+  draw();
 }
 
-function render(list) {
+// ============================================================
+// DARK MODE
+// ============================================================
+function initTheme() {
+  const btn = document.getElementById("theme-btn");
+  try {
+    if (localStorage.getItem("kr_theme") === "dark") {
+      document.body.classList.add("dark");
+      document.documentElement.classList.add("dark");
+      btn.textContent = "☀️";
+    }
+  } catch(e) {}
+
+  btn.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+    document.documentElement.classList.toggle("dark");
+    const dark = document.body.classList.contains("dark");
+    btn.textContent = dark ? "☀️" : "🌙";
+    try { localStorage.setItem("kr_theme", dark ? "dark" : "light"); } catch(e) {}
+  });
+}
+
+// ============================================================
+// RENDU CARTES
+// ============================================================
+function renderCards(projects) {
+  const grid = document.getElementById("grid");
   grid.innerHTML = "";
+  projects.forEach((p, i) => {
+    const card = document.createElement("div");
+    card.className = "card";
+    card.dataset.color = p.color;
+    card.dataset.tags  = p.tags.join(" ");
+    card.style.animationDelay = (i * 0.04) + "s";
 
-  if (list.length === 0) {
-    empty.classList.remove("hidden");
-  } else {
-    empty.classList.add("hidden");
-  }
+    const tagsHtml = p.tags.map(t => `<span class="tag">${t}</span>`).join("");
 
-  list.forEach((p, i) => {
-    const div = document.createElement("div");
-    div.className = "card";
+    const siteBtn = p.site
+      ? `<a href="${p.site}" target="_blank" class="btn primary">🌐 Voir le site</a>`
+      : "";
 
-    div.innerHTML = `
-      <div class="title">${p.title}</div>
-      <div class="desc">${p.desc}</div>
-      <div class="tags">${p.tags.join(" · ")}</div>
-      <div class="links">
-        <a href="${p.github}" target="_blank">GitHub</a>
-        ${p.site ? `<a href="${p.site}" target="_blank">Site</a>` : ""}
+    card.innerHTML = `
+      <div class="card-top">
+        <div class="card-emoji">${p.emoji}</div>
+        <div class="card-title-wrap">
+          <div class="card-title">${p.title}</div>
+          <span class="card-tags-top">${p.tags.join(" · ")}</span>
+        </div>
       </div>
+      <p class="card-desc">${p.desc}</p>
+      <div class="card-tags">${tagsHtml}</div>
+      <div class="card-links">
+        <a href="${p.github}" target="_blank" class="btn">⌥ GitHub</a>
+        ${siteBtn}
+      </div>    
+      <div class="card-status">${p.status}</div>
     `;
 
-    grid.appendChild(div);
-
-    setTimeout(() => div.classList.add("show"), i * 40);
+    grid.appendChild(card);
   });
 
-  count.textContent = list.length;
+  document.getElementById("count").textContent = PROJECTS.length;
 }
 
-function filter() {
-  const result = PROJECTS.filter(p => {
-    const matchTag = active === "all" || p.tags.includes(active);
+// ============================================================
+// FILTRES + SEARCH
+// ============================================================
+let activeFilter = "all";
+let searchQuery  = "";
 
-    const matchSearch =
-      p.title.toLowerCase().includes(search) ||
-      p.desc.toLowerCase().includes(search) ||
-      p.tags.join(" ").toLowerCase().includes(search);
-
-    return matchTag && matchSearch;
+function applyFilters() {
+  const filtered = PROJECTS.filter(p => {
+    const matchFilter = activeFilter === "all" || p.tags.includes(activeFilter);
+    const matchSearch = searchQuery === ""
+      || p.title.toLowerCase().includes(searchQuery)
+      || p.desc.toLowerCase().includes(searchQuery);
+    return matchFilter && matchSearch;
   });
-
-  render(result);
+  renderCards(filtered);
 }
 
-document.getElementById("search").addEventListener(
-  "input",
-  debounce(e => {
-    search = e.target.value.toLowerCase().trim();
-    filter();
-  })
-);
-
-document.querySelectorAll(".filter").forEach(btn => {
-  btn.addEventListener("click", () => {
-    document.querySelectorAll(".filter").forEach(b => b.classList.remove("active"));
-    btn.classList.add("active");
-
-    active = btn.dataset.filter;
-    filter();
+function initFilters() {
+  document.querySelectorAll(".filt").forEach(btn => {
+    btn.addEventListener("click", () => {
+      document.querySelectorAll(".filt").forEach(b => b.classList.remove("on"));
+      btn.classList.add("on");
+      activeFilter = btn.dataset.f;
+      applyFilters();
+    });
   });
-});
+}
 
-document.getElementById("theme").addEventListener("click", () => {
-  document.body.classList.toggle("light");
-});
+function initSearch() {
+  document.getElementById("search").addEventListener("input", ev => {
+    searchQuery = ev.target.value.toLowerCase().trim();
+    applyFilters();
+  });
+}
 
-filter();
+// ============================================================
+// BOOT
+// ============================================================
+document.addEventListener("DOMContentLoaded", () => {
+  initBg();
+  initTheme();
+  initFilters();
+  initSearch();
+  renderCards(PROJECTS);
+  document.addEventListener("contextmenu", ev => ev.preventDefault());
+});
