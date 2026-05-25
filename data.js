@@ -124,6 +124,17 @@ const PROJECTS = [
     color: "purple",
   },
   {
+    id: "proftolio",
+    title: "Proftolio",
+    desc: "Liste des trucs, un proftolio.",
+    emoji: "📋",
+    tags: ["jeu"],
+    github: "https://github.com/kevinraphael95/proftolio",
+    site: "https://kevinraphael95.github.io/proftolio/",
+    status: "alpha",
+    color: "purple",
+  },
+  {
     id: "tupreferes",
     title: "Tu Préfères",
     desc: "Jeu — choisir entre deux pages Wikipedia aléatoires. Laquelle est la meilleure ?",
