@@ -102,7 +102,7 @@ function renderCards(projects) {
         <span class="status ${st.cls}">${st.label}</span>
         <div class="card-links">
           <a href="${p.github}" target="_blank" rel="noopener" class="btn-sm" onclick="event.stopPropagation()">GitHub</a>
-          ${hasLink ? `<a href="${p.site}" target="_blank" rel="noopener" class="btn-sm primary" onclick="event.stopPropagation()">▶ Jouer</a>` : ''}
+          ${hasLink ? `<a href="${p.site}" target="_blank" rel="noopener" class="btn-sm primary" onclick="event.stopPropagation()">↗ Site</a>` : ''}
         </div>
       </div>
     `;
