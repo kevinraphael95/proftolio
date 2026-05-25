@@ -70,15 +70,24 @@ function renderCards(projects) {
     canvas.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover;';
     drawThumb(canvas, p);
 
-    const inner = document.createElement('div');
-    inner.className = 'thumb-inner';
-    inner.innerHTML = `
-      <div class="thumb-emoji">${p.emoji}</div>
-      <div class="thumb-title" style="color:${p.palette[2] || '#fff'}">${p.title}</div>
-    `;
-
     thumb.appendChild(canvas);
-    thumb.appendChild(inner);
+
+    if (p.img) {
+      const imgEl = document.createElement('img');
+      imgEl.className = 'thumb-img';
+      imgEl.src = p.img;
+      imgEl.alt = p.title;
+      imgEl.loading = 'lazy';
+      thumb.appendChild(imgEl);
+    } else {
+      const inner = document.createElement('div');
+      inner.className = 'thumb-inner';
+      inner.innerHTML = `
+        <div class="thumb-emoji">${p.emoji}</div>
+        <div class="thumb-title" style="color:${p.palette[2] || '#fff'}">${p.title}</div>
+      `;
+      thumb.appendChild(inner);
+    }
 
     // Body
     const body = document.createElement('div');
