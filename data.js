@@ -1,11 +1,3 @@
-/* états */
-/*
-fonctionnel
-en travaux
-test
-abandonné
-*/
-
 'use strict';
 
 const PROJECTS = [
