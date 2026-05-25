@@ -46,7 +46,7 @@ const PROJECTS = [
     subtitle: "Cartes custom",
     desc: "Cartes Yu-Gi-Oh! custom à l'univers Dark Souls — pour les masochistes collectionneurs.",
     emoji: "🔥",
-    img: "assets/images/darksoulsygo.png",
+    img: "assets/images/darksoulsygo.jpg",
     tags: ["tcg"],
     github: "https://github.com/kevinraphael95/darksoulsygo",
     site: null,
