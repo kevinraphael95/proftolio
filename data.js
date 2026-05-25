@@ -75,7 +75,7 @@ const PROJECTS = [
     emoji: "🌼",
     tags: ["jeu"],
     github: "https://github.com/kevinraphael95/jardin",
-    site: "https://kevinraphael95.github.io/jardin/jaridn.html",
+    site: "https://kevinraphael95.github.io/jardin/index.html",
     status: "proof of concept",
     color: "purple",
   },
