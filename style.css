@@ -283,12 +283,12 @@ body.dark .card:hover {
   flex: 1;
 }
 
-.card-meta {
+.card-top-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 5px;
-  gap: 6px;
+  gap: 8px;
+  margin-bottom: 6px;
 }
 
 .card-name {
@@ -314,13 +314,6 @@ body.dark .card:hover {
   overflow: hidden;
   min-height: calc(0.82rem * 1.55 * 2);
   flex: 1;
-}
-
-.card-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 6px;
 }
 
 /* ── STATUS ── */
@@ -355,28 +348,29 @@ body.dark .s-alpha{ background: rgba(147,51,234,.18); color: #d8b4fe; border-col
 /* ── LINKS ── */
 .card-links {
   display: flex;
-  gap: 5px;
+  gap: 6px;
 }
 
 .btn-sm {
-  font-size: .65rem;
+  font-size: .8rem;
   font-weight: 600;
   font-family: var(--font-body);
-  padding: 4px 9px;
-  border-radius: 7px;
-  border: 1px solid var(--border);
+  padding: 8px 0;
+  border-radius: 8px;
+  border: 1.5px solid var(--border);
   background: transparent;
-  color: var(--muted);
+  color: var(--text);
   text-decoration: none;
   cursor: pointer;
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 3px;
+  justify-content: center;
+  flex: 1;
   transition: all .12s;
   white-space: nowrap;
 }
 
-.btn-sm:hover { border-color: var(--text); color: var(--text); }
+.btn-sm:hover { border-color: var(--text); background: var(--surface); }
 
 .btn-sm.primary {
   background: var(--text);
