@@ -181,7 +181,7 @@ const PROJECTS = [
     subtitle: "Devine le Pokémon",
     desc: "La silhouette apparaît. Tu as 3 essais. Bonne chance.",
     emoji: "👁️",
-    img: "assets/images/wtp.png",
+    img: "assets/images/wtp.jpg",
     tags: ["jeu"],
     github: "https://github.com/kevinraphael95/whosthatpokemon",
     site: "https://kevinraphael95.github.io/whosthatpokemon/",
