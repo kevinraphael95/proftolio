@@ -2,32 +2,27 @@
 
 // ── STATUS ──────────────────────────────────────────────────
 const STATUS_MAP = {
-  "fonctionnel":          { cls: "s-ok",    label: "✓ OK" },
-  "beta":                 { cls: "s-beta",  label: "β Beta" },
-  "alpha":                { cls: "s-alpha", label: "α Alpha" },
-  "en travaux":           { cls: "s-wip",   label: "⚒ WIP" },
+  "fonctionnel":          { cls: "s-ok",    label: "OK" },
+  "beta":                 { cls: "s-beta",  label: "Beta" },
+  "alpha":                { cls: "s-alpha", label: "Alpha" },
+  "en travaux":           { cls: "s-wip",   label: "WIP" },
   "test":                 { cls: "s-wip",   label: "Test" },
-  "proof of concept":     { cls: "s-poc",   label: "PoC" },
-  "minimum vital product":{ cls: "s-mvp",   label: "MVP" },
-  "abandonné":            { cls: "s-dead",  label: "✕ Abandonné" },
+  "proof of concept":     { cls: "s-poc",   label: "Proof of Concept" },
+  "minimum vital product":{ cls: "s-mvp",   label: "Minimum Viable Product" },
+  "abandonné":            { cls: "s-dead",  label: "Abandonné" },
 };
 
 // ── THUMB CANVAS ────────────────────────────────────────────
-// Draw a coloured thumbnail on a <canvas> using the project palette
 function drawThumb(canvas, p) {
   const W = canvas.width  = 600;
   const H = canvas.height = 280;
   const ctx = canvas.getContext('2d');
   const [c1, c2, c3] = p.palette;
-
-  // background gradient
   const g = ctx.createLinearGradient(0, 0, W, H);
   g.addColorStop(0, c1);
   g.addColorStop(1, c2);
   ctx.fillStyle = g;
   ctx.fillRect(0, 0, W, H);
-
-  // decorative blobs
   ctx.globalAlpha = .18;
   ctx.fillStyle = c3;
   ctx.beginPath();
@@ -45,10 +40,7 @@ function renderCards(projects) {
   grid.innerHTML = '';
 
   if (!projects.length) {
-    grid.innerHTML = `<div class="empty">
-      <div class="empty-emoji">🔍</div>
-      <p>Aucun projet trouvé.</p>
-    </div>`;
+    grid.innerHTML = `<div class="empty"><div class="empty-emoji">🔍</div><p>Aucun projet trouvé.</p></div>`;
     document.getElementById('count').textContent = '0';
     return;
   }
@@ -69,7 +61,6 @@ function renderCards(projects) {
     const canvas = document.createElement('canvas');
     canvas.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover;';
     drawThumb(canvas, p);
-
     thumb.appendChild(canvas);
 
     if (p.img) {
@@ -92,29 +83,21 @@ function renderCards(projects) {
     // Body
     const body = document.createElement('div');
     body.className = 'card-body';
-
     body.innerHTML = `
-      <div class="card-meta">
+      <div class="card-top-row">
         <div class="card-name">${p.title}</div>
+        <span class="status ${st.cls}">${st.label}</span>
       </div>
       <div class="card-desc">${p.desc}</div>
-      <div class="card-footer">
-        <span class="status ${st.cls}">${st.label}</span>
-        <div class="card-links">
-          <a href="${p.github}" target="_blank" rel="noopener" class="btn-sm" onclick="event.stopPropagation()">GitHub</a>
-          ${hasLink ? `<a href="${p.site}" target="_blank" rel="noopener" class="btn-sm primary" onclick="event.stopPropagation()">↗ Site</a>` : ''}
-        </div>
+      <div class="card-links">
+        <a href="${p.github}" target="_blank" rel="noopener" class="btn-sm" onclick="event.stopPropagation()">GitHub</a>
+        ${hasLink ? `<a href="${p.site}" target="_blank" rel="noopener" class="btn-sm primary" onclick="event.stopPropagation()">↗ Site</a>` : ''}
       </div>
     `;
 
     card.appendChild(thumb);
     card.appendChild(body);
-
-    // Click card → open site or github
-    card.addEventListener('click', () => {
-      window.open(p.site || p.github, '_blank', 'noopener');
-    });
-
+    card.addEventListener('click', () => window.open(p.site || p.github, '_blank', 'noopener'));
     grid.appendChild(card);
   });
 
@@ -128,7 +111,7 @@ let searchQuery  = '';
 function applyFilters() {
   const q = searchQuery;
   renderCards(PROJECTS.filter(p => {
-    const matchTag  = activeFilter === 'all' || p.tags.includes(activeFilter);
+    const matchTag    = activeFilter === 'all' || p.tags.includes(activeFilter);
     const matchSearch = !q || p.title.toLowerCase().includes(q) || p.desc.toLowerCase().includes(q) || (p.subtitle || '').toLowerCase().includes(q);
     return matchTag && matchSearch;
   }));
