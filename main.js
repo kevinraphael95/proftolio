@@ -1,126 +1,155 @@
 'use strict';
 
-// ── BG CANVAS ──────────────────────────────────────────────
-function initBg() {
-  const canvas = document.getElementById("bg-canvas");
-  const ctx = canvas.getContext("2d");
-  let W, H, t = 0;
-  const COLS=30, ROWS=20, AMP=6, FREQ=0.16, SPEED=0.016;
-
-  const resize = () => { W = canvas.width = innerWidth; H = canvas.height = innerHeight; };
-  resize();
-  window.addEventListener("resize", resize);
-
-  (function draw() {
-    ctx.clearRect(0, 0, W, H);
-    ctx.fillStyle = document.body.classList.contains("dark")
-      ? "rgba(120,140,255,0.18)" : "rgba(91,69,214,0.10)";
-    const cw = W/COLS, ch = H/ROWS;
-    for (let r=0; r<=ROWS; r++) for (let c=0; c<=COLS; c++) {
-      const w = Math.sin(c*FREQ + r*FREQ*0.7 + t)*AMP + Math.sin(c*FREQ*0.5 - r*FREQ*1.2 + t*0.8)*AMP*0.5;
-      ctx.beginPath();
-      ctx.arc(c*cw + w, r*ch + w*0.6, document.body.classList.contains("dark") ? 1.3 : 1.0, 0, Math.PI*2);
-      ctx.fill();
-    }
-    t += SPEED;
-    requestAnimationFrame(draw);
-  })();
-}
-
-// ── DARK MODE ──────────────────────────────────────────────
-function initTheme() {
-  const btn = document.getElementById("theme-btn");
-  const apply = dark => {
-    document.body.classList.toggle("dark", dark);
-    document.documentElement.classList.toggle("dark", dark);
-    btn.textContent = dark ? "☀️" : "🌙";
-  };
-  try { apply(localStorage.getItem("kr_theme") === "dark"); } catch(e) {}
-  btn.addEventListener("click", () => {
-    const dark = !document.body.classList.contains("dark");
-    apply(dark);
-    try { localStorage.setItem("kr_theme", dark ? "dark" : "light"); } catch(e) {}
-  });
-}
-
-// ── TAG COLORS ─────────────────────────────────────────────
-const TAG_COLORS = { jeu: "purple", bot: "teal", tcg: "coral", quizz: "blue" };
-
-const STATUS_CLASSES = {
-  "fonctionnel": "status-ok",
-  "en travaux":  "status-wip",
-  "test":        "status-test",
-  "abandonné":   "status-dead"
+// ── STATUS ──────────────────────────────────────────────────
+const STATUS_MAP = {
+  "fonctionnel":          { cls: "s-ok",    label: "OK" },
+  "beta":                 { cls: "s-beta",  label: "Beta" },
+  "alpha":                { cls: "s-alpha", label: "Alpha" },
+  "en travaux":           { cls: "s-wip",   label: "WIP" },
+  "test":                 { cls: "s-wip",   label: "Test" },
+  "proof of concept":     { cls: "s-poc",   label: "Proof of Concept" },
+  "minimum vital product":{ cls: "s-mvp",   label: "Minimum Viable Product" },
+  "abandonné":            { cls: "s-dead",  label: "Abandonné" },
 };
 
-// ── RENDER ─────────────────────────────────────────────────
-function renderCards(projects) {
-  const grid = document.getElementById("grid");
-  grid.innerHTML = "";
-  projects.forEach((p, i) => {
-    const card = document.createElement("div");
-    card.className = "card";
-    card.dataset.color = p.color;
-    card.style.animationDelay = (i * 0.04) + "s";
+// ── THUMB CANVAS ────────────────────────────────────────────
+// Draw a coloured thumbnail on a <canvas> using the project palette
+function drawThumb(canvas, p) {
+  const W = canvas.width  = 600;
+  const H = canvas.height = 280;
+  const ctx = canvas.getContext('2d');
+  const [c1, c2, c3] = p.palette;
 
-    const tagsHtml = p.tags.map(t =>
-      `<span class="tag tag-${TAG_COLORS[t] || 'gray'}">${t}</span>`
-    ).join("");
+  // background gradient
+  const g = ctx.createLinearGradient(0, 0, W, H);
+  g.addColorStop(0, c1);
+  g.addColorStop(1, c2);
+  ctx.fillStyle = g;
+  ctx.fillRect(0, 0, W, H);
 
-    card.innerHTML = `
-      <div class="card-top">
-        <div class="card-emoji">${p.emoji}</div>
-        <div class="card-title-wrap">
-          <div class="card-title">${p.title}</div>
-          <div class="card-tags-inline">${tagsHtml}</div>
-        </div>
-      </div>
-      <p class="card-desc">${p.desc}</p>
-      <div class="card-footer">
-        <span class="card-status ${STATUS_CLASSES[p.status] || ''}">
-          ${p.status}
-        </span>
-        <div class="card-links">
-          <a href="${p.github}" target="_blank" class="btn">⌥ GitHub</a>
-          ${p.site ? `<a href="${p.site}" target="_blank" class="btn primary">🌐 Site</a>` : ""}
-        </div>
-      </div>
-    `;
-    grid.appendChild(card);
-  });
-  document.getElementById("count").textContent = projects.length;
+  // decorative blobs
+  ctx.globalAlpha = .18;
+  ctx.fillStyle = c3;
+  ctx.beginPath();
+  ctx.arc(W * .8, H * .25, H * .65, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.beginPath();
+  ctx.arc(W * .15, H * .85, H * .4, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.globalAlpha = 1;
 }
 
-// ── FILTRES + SEARCH ───────────────────────────────────────
-let activeFilter = "all", searchQuery = "";
+// ── RENDER ──────────────────────────────────────────────────
+function renderCards(projects) {
+  const grid = document.getElementById('grid');
+  grid.innerHTML = '';
+
+  if (!projects.length) {
+    grid.innerHTML = `<div class="empty">
+      <div class="empty-emoji">🔍</div>
+      <p>Aucun projet trouvé.</p>
+    </div>`;
+    document.getElementById('count').textContent = '0';
+    return;
+  }
+
+  projects.forEach((p, i) => {
+    const st = STATUS_MAP[p.status] || { cls: 's-poc', label: p.status };
+    const hasLink = !!p.site;
+
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.style.animationDelay = (i * 0.035) + 's';
+
+    // Thumb
+    const thumb = document.createElement('div');
+    thumb.className = 'card-thumb';
+    thumb.style.background = p.palette[0];
+
+    const canvas = document.createElement('canvas');
+    canvas.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover;';
+    drawThumb(canvas, p);
+
+    thumb.appendChild(canvas);
+
+    if (p.img) {
+      const imgEl = document.createElement('img');
+      imgEl.className = 'thumb-img';
+      imgEl.src = p.img;
+      imgEl.alt = p.title;
+      imgEl.loading = 'lazy';
+      thumb.appendChild(imgEl);
+    } else {
+      const inner = document.createElement('div');
+      inner.className = 'thumb-inner';
+      inner.innerHTML = `
+        <div class="thumb-emoji">${p.emoji}</div>
+        <div class="thumb-title" style="color:${p.palette[2] || '#fff'}">${p.title}</div>
+      `;
+      thumb.appendChild(inner);
+    }
+
+    card.appendChild(thumb);
+    card.addEventListener('click', () => {
+      window.open(p.site || p.github, '_blank', 'noopener');
+    });
+    grid.appendChild(card);
+  });
+
+  document.getElementById('count').textContent = projects.length;
+}
+
+// ── FILTERS + SEARCH ────────────────────────────────────────
+let activeFilter = 'all';
+let searchQuery  = '';
 
 function applyFilters() {
-  renderCards(PROJECTS.filter(p =>
-    (activeFilter === "all" || p.tags.includes(activeFilter)) &&
-    (!searchQuery || p.title.toLowerCase().includes(searchQuery) || p.desc.toLowerCase().includes(searchQuery))
-  ));
+  const q = searchQuery;
+  renderCards(PROJECTS.filter(p => {
+    const matchTag  = activeFilter === 'all' || p.tags.includes(activeFilter);
+    const matchSearch = !q || p.title.toLowerCase().includes(q) || p.desc.toLowerCase().includes(q) || (p.subtitle || '').toLowerCase().includes(q);
+    return matchTag && matchSearch;
+  }));
 }
 
 function initFilters() {
-  document.querySelectorAll(".filt").forEach(btn =>
-    btn.addEventListener("click", () => {
-      document.querySelectorAll(".filt").forEach(b => b.classList.remove("on"));
-      btn.classList.add("on");
+  document.querySelectorAll('.filt').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filt').forEach(b => b.classList.remove('on'));
+      btn.classList.add('on');
       activeFilter = btn.dataset.f;
       applyFilters();
-    })
-  );
+    });
+  });
 }
 
 function initSearch() {
-  document.getElementById("search").addEventListener("input", ev => {
+  document.getElementById('search').addEventListener('input', ev => {
     searchQuery = ev.target.value.toLowerCase().trim();
     applyFilters();
   });
 }
 
-// ── BOOT ───────────────────────────────────────────────────
-document.addEventListener("DOMContentLoaded", () => {
-  initBg(); initTheme(); initFilters(); initSearch(); renderCards(PROJECTS);
-  document.addEventListener("contextmenu", ev => ev.preventDefault());
+// ── THEME ───────────────────────────────────────────────────
+function initTheme() {
+  const btn = document.getElementById('theme-btn');
+  const apply = dark => {
+    document.body.classList.toggle('dark', dark);
+    btn.textContent = dark ? '☀️' : '🌙';
+  };
+  try { apply(localStorage.getItem('kr_theme') === 'dark'); } catch(e) {}
+  btn.addEventListener('click', () => {
+    const dark = !document.body.classList.contains('dark');
+    apply(dark);
+    try { localStorage.setItem('kr_theme', dark ? 'dark' : 'light'); } catch(e) {}
+  });
+}
+
+// ── BOOT ────────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', () => {
+  initTheme();
+  initFilters();
+  initSearch();
+  applyFilters();
+  document.addEventListener('contextmenu', ev => ev.preventDefault());
 });
