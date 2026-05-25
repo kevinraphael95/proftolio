@@ -31,7 +31,7 @@ const PROJECTS = [
     id: "craftgame",
     title: "Craft Game",
     subtitle: "Fusionne des trucs",
-    desc: "Jeu de craft inspiré d'Infinite Craft — combine des éléments pour en découvrir d'autres.",
+    desc: "Recréer l'univers et tout dans l'univers à partir des particules élémentaires.",
     emoji: "⚗️",
     img: "assets/images/craftgame.png",
     tags: ["jeu"],
