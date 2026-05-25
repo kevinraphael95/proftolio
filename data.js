@@ -20,6 +20,7 @@ const PROJECTS = [
     subtitle: "I'm not a robot",
     desc: "Un CAPTCHA devenu jeu. Prouve que t'es humain.",
     emoji: "🗿",
+    img: "assets/images/captcha.png",
     tags: ["jeu"],
     github: "https://github.com/kevinraphael95/captcha",
     site: "https://kevinraphael95.github.io/captcha/captcha.html",
