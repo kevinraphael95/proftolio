@@ -243,45 +243,21 @@ body.dark .card:hover {
 
 /* ── THUMBNAIL ── the visual preview block ── */
 .card-thumb {
+  aspect-ratio: 16 / 7;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   overflow: hidden;
-  font-size: 4rem;
-  letter-spacing: -.02em;
   user-select: none;
-  min-height: 120px;
-}
-
-.card-thumb::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: inherit;
-  filter: blur(0px);
-}
-
-.thumb-inner {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
-}
-
-.thumb-emoji {
-  font-size: 3rem;
-  line-height: 1;
-  filter: drop-shadow(0 2px 8px rgba(0,0,0,.3));
 }
 
 .thumb-img {
-  position: relative;
+  position: absolute;
+  inset: 0;
   width: 100%;
-  height: auto;
-  display: block;
+  height: 100%;
+  object-fit: cover;
 }
 
 .thumb-title {
