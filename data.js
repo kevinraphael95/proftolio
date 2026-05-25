@@ -57,6 +57,7 @@ const PROJECTS = [
     subtitle: "Dessine avec Wikipedia",
     desc: "Dessine avec des mots tirés d'une page aléatoire de Wikipedia.",
     emoji: "🖊️",
+    img: "assets/images/drawword.png",
     tags: ["jeu"],
     github: "https://github.com/kevinraphael95/DRAWWORD",
     site: "https://kevinraphael95.github.io/DRAWWORD/index.html",
