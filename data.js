@@ -141,7 +141,7 @@ const PROJECTS = [
     emoji: "🎲",
     tags: ["jeu"],
     github: "https://github.com/kevinraphael95/tupreferes",
-    site: "https://kevinraphael95.github.io/tupreferes/wiki-prefer.html",
+    site: "https://kevinraphael95.github.io/tupreferes/index.html",
     status: "proof of concept",
     color: "teal",
   },
