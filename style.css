@@ -209,6 +209,7 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 12px;
+  align-items: start;
 }
 
 /* ── CARD ── thumbnail style like neal.fun ── */
@@ -242,7 +243,6 @@ body.dark .card:hover {
 
 /* ── THUMBNAIL ── the visual preview block ── */
 .card-thumb {
-  height: 140px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -251,6 +251,7 @@ body.dark .card:hover {
   font-size: 4rem;
   letter-spacing: -.02em;
   user-select: none;
+  min-height: 120px;
 }
 
 .card-thumb::before {
@@ -277,12 +278,10 @@ body.dark .card:hover {
 }
 
 .thumb-img {
-  position: absolute;
-  inset: 0;
+  position: relative;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
+  height: auto;
+  display: block;
 }
 
 .thumb-title {
@@ -435,7 +434,7 @@ footer {
   .hero { padding: 28px 0 28px; }
   .hero h1 { font-size: 1.7rem; }
   .grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
-  .card-thumb { height: 110px; }
+  .card-thumb { height: auto; }
   .thumb-emoji { font-size: 2.2rem; }
   .thumb-title { font-size: .75rem; }
   .card-body { padding: 10px 10px 12px; }
