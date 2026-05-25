@@ -1,0 +1,27 @@
+Idée et conception
+ — On définit précisément le but de l’application, ses fonctionnalités, son public cible, son design et les technologies nécessaires avant de commencer à coder.
+
+
+Prototype / Proof of Concept (PoC)
+ — On crée une version très simple et expérimentale pour vérifier rapidement que les idées principales et les aspects techniques fonctionnent réellement.
+
+
+MVP (Minimum Viable Product)
+ — On développe une première version utilisable contenant uniquement les fonctionnalités essentielles afin de pouvoir tester le projet dans des conditions réelles.
+
+
+Alpha
+ — L’application entre dans une phase de tests internes intensifs où les fonctionnalités sont encore incomplètes et où de nombreux bugs et changements importants sont attendus.
+
+
+Bêta
+ — Une version presque terminée est rendue accessible à des testeurs externes afin d’identifier les derniers bugs, améliorer l’expérience utilisateur et optimiser les performances.
+
+
+Release Candidate (RC)
+ — Une version considérée comme quasiment finale est préparée pour la sortie officielle et ne sera modifiée qu’en cas de découverte de problèmes critiques.
+Production / Release — L’application est officiellement déployée et mise à disposition du public sur ses plateformes prévues avec une infrastructure stable et fonctionnelle.
+
+
+Maintenance et mises à jour
+ — Après la sortie, le développement continue avec des corrections de bugs, des améliorations, des optimisations de sécurité et l’ajout régulier de nouvelles fonctionnalités.
