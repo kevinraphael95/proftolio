@@ -20,7 +20,7 @@ const PROJECTS = [
     emoji: "🗿",
     tags: ["jeu"],
     github: "https://github.com/kevinraphael95/captcha",
-    site: "https://kevinraphael95.github.io/captcha/captcha.html",
+    site: "https://kevinraphael95.github.io/captcha/index.html",
     status: "proof of concept",
     color: "purple",
   },
