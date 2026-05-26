@@ -3,48 +3,56 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="kevinraphael95 — jeux, bots discord et trucs en tout genre">
 <title>kevinraphael95 — projets</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<canvas id="bg-canvas"></canvas>
-
-<div class="layout">
-
-  <header>
-    <div class="header-left">
-      <div class="avatar">KR</div>
-      <div class="header-info">
-        <h1>kevinraphael95</h1>
-        <a href="https://github.com/kevinraphael95" target="_blank" class="gh-link">github.com/kevinraphael95 ↗</a>
-      </div>
+<header class="site-header">
+  <a href="#" class="logo">kevinraphael95<span>.</span></a>
+  <div class="header-controls">
+    <div class="search-box">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+      </svg>
+      <input id="search" type="text" placeholder="Rechercher…" autocomplete="off" aria-label="Rechercher un projet">
     </div>
-    <div class="header-right">
-      <div class="search-wrap">
-        <span class="search-icon">⌕</span>
-        <input id="search" type="text" placeholder="Rechercher…" autocomplete="off">
-      </div>
-      <button id="theme-btn" title="Thème">🌙</button>
-    </div>
-  </header>
+    <button id="theme-btn" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+  </div>
+</header>
 
-  <div class="filters" id="filters">
+<main class="layout">
+
+  <section class="hero">
+    <h1>games and stuff</h1>
+    <p class="hero-sub">
+      par <a href="https://github.com/kevinraphael95" target="_blank" rel="noopener">@kevinraphael95</a>
+    </p>
+  </section>
+
+  <div class="filters" role="group" aria-label="Filtrer par catégorie">
     <button class="filt on" data-f="all">Tout</button>
     <button class="filt" data-f="jeu">🎮 Jeux</button>
-    <button class="filt" data-f="bot">🤖 Bots Discord</button>
-    <button class="filt" data-f="tcg">🃏 Cartes TCG</button>
+    <button class="filt" data-f="bot">🤖 Bots</button>
+    <button class="filt" data-f="tcg">🃏 TCG</button>
+    <button class="filt" data-f="quizz">📊 Quiz</button>
   </div>
 
-  <div class="grid" id="grid"></div>
+  <div class="filter-bar">
+    <span class="count-label"><span id="count">0</span> projets</span>
+  </div>
 
-  <footer>
-    <span id="count"></span> projets
-  </footer>
+  <div class="grid" id="grid" role="list"></div>
 
-</div>
+</main>
+
+<footer>
+  fait avec ❤️ par kevinraphael95 — <a href="https://github.com/kevinraphael95" target="_blank" rel="noopener" style="color:inherit">github</a>
+</footer>
 
 <script src="data.js"></script>
 <script src="main.js"></script>
