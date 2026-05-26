@@ -150,6 +150,7 @@ const PROJECTS = [
     subtitle: "Celui-ci",
     desc: "Liste de tous les trucs. Un portfolio. Proftolio.",
     emoji: "📋",
+    img: "assets/images/proftolio.png",
     tags: ["jeu"],
     github: "https://github.com/kevinraphael95/proftolio",
     site: "https://kevinraphael95.github.io/proftolio/",
