@@ -115,7 +115,7 @@ const PROJECTS = [
   {
     id: "notsteam",
     title: "NotSteam",
-    desc: "C'est pas Steam du tout.",
+    desc: "C'est pas Steam du tout. Collection de ROMS gratuites prises partout sur internet.",
     emoji: "🕹️",
     tags: ["jeu"],
     github: "https://github.com/kevinraphael95/notsteam",
