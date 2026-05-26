@@ -109,7 +109,7 @@ const PROJECTS = [
     tags: ["bot"],
     github: "https://github.com/kevinraphael95/mhfz",
     site: "https://kevinraphael95.github.io/mhfz/",
-    status: "beta",
+    status: "alpha",
     color: "green",
   },
   {
