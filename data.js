@@ -195,6 +195,18 @@ const PROJECTS = [
     palette: ["#ffcb05", "#3b4cca", "#cc0000"],
   },
   {
+    id: "wikigames",
+    title: "Wiki Games",
+    subtitle: "Wikipedia games",
+    desc: "Wikipedia Games !",
+    emoji: "🌀",
+    tags: ["jeu"],
+    github: "https://github.com/kevinraphael95/wikigames",
+    site: "https://kevinraphael95.github.io/wikigames/",
+    status: "proof of concept",
+    palette: ["#0a0a0a", "#3b82f6", "#bfdbfe"],
+  },
+  {
     id: "wikitcg",
     title: "WikiTCG",
     subtitle: "Wikipedia → Cartes",
