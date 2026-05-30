@@ -147,7 +147,7 @@ const PROJECTS = [
   {
     id: "proftolio",
     title: "Proftolio",
-    subtitle: "Celui-ci",
+    subtitle: "Proftolio",
     desc: "Liste de tous les trucs. Un portfolio. Proftolio.",
     emoji: "📋",
     img: "assets/images/proftolio.png",
