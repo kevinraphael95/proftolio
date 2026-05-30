@@ -23,7 +23,7 @@ const PROJECTS = [
     img: "assets/images/captcha.png",
     tags: ["jeu"],
     github: "https://github.com/kevinraphael95/captcha",
-    site: "https://kevinraphael95.github.io/captcha/captcha.html",
+    site: "https://kevinraphael95.github.io/captcha/",
     status: "proof of concept",
     palette: ["#f0f0f0", "#333", "#888"],
   },
