@@ -171,6 +171,18 @@ const PROJECTS = [
     palette: ["#18181b", "#a855f7", "#e9d5ff"],
   },
   {
+    id: "bleachquiz",
+    title: "The ImpossiBLEACH Quiz",
+    subtitle: "The ImpossiBLEACH Quiz",
+    desc: "The ImpossiBLEACH Quiz",
+    emoji: "🎲",
+    tags: ["jeu", "quiz"],
+    github: "https://github.com/kevinraphael95/bleachquiz",
+    site: "https://kevinraphael95.github.io/bleachquiz/",
+    status: "proof of concept",
+    palette: ["#0f172a", "#06b6d4", "#cffafe"],
+  },
+  {
     id: "tupreferes",
     title: "Tu Préfères",
     subtitle: "Wikipedia battle",
