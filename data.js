@@ -95,8 +95,8 @@ const PROJECTS = [
   {
     id: "kevinscale",
     title: "Kévinscale",
-    subtitle: "Quiz politique",
-    desc: "Version custom de PolitiScale — découvre à quel point tu es Kévin.",
+    subtitle: "Kévinscale",
+    desc: "Kévinscale.",
     emoji: "📊",
     img: "assets/images/kevinscale.png",
     tags: ["quizz"],
