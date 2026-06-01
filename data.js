@@ -189,6 +189,7 @@ const PROJECTS = [
     subtitle: "Wikipedia battle",
     desc: "Choisis entre deux pages Wikipedia aléatoires. Laquelle gagne ?",
     emoji: "🎲",
+    img: "assets/images/tupreferes.png",
     tags: ["jeu"],
     github: "https://github.com/kevinraphael95/tupreferes",
     site: "https://kevinraphael95.github.io/tupreferes/",
