@@ -162,7 +162,7 @@ const PROJECTS = [
     title: "SmashCar",
     subtitle: "SmashCar",
     desc: "SmashCar.",
-    emoji: "📋",
+    emoji: "🚗",
     img: "assets/images/smashcar.png",
     tags: ["jeu"],
     github: "https://github.com/kevinraphael95/smashcar",
