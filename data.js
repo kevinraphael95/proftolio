@@ -176,6 +176,7 @@ const PROJECTS = [
     subtitle: "The ImpossiBLEACH Quiz",
     desc: "The ImpossiBLEACH Quiz",
     emoji: "🎲",
+    img: "assets/images/bleachquiz.png",
     tags: ["jeu", "quiz"],
     github: "https://github.com/kevinraphael95/bleachquiz",
     site: "https://kevinraphael95.github.io/bleachquiz/",
