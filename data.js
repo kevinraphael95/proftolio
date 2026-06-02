@@ -215,7 +215,7 @@ const PROJECTS = [
     subtitle: "Devine le Pokémon",
     desc: "Who's that Pokemon ?",
     emoji: "👁️",
-    img: "assets/images/wtp.jpg",
+    img: "assets/images/wtp.png",
     tags: ["jeu"],
     github: "https://github.com/kevinraphael95/whosthatpokemon",
     site: "https://kevinraphael95.github.io/whosthatpokemon/",
