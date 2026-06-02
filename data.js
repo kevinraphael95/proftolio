@@ -202,6 +202,7 @@ const PROJECTS = [
     subtitle: "Cartes custom",
     desc: "Cartes Yu-Gi-Oh! custom VAACT.",
     emoji: "🃏",
+    img: "assets/images/vaact.png",
     tags: ["tcg"],
     github: "https://github.com/kevinraphael95/vaact_custom_ygo",
     site: null,
