@@ -172,9 +172,9 @@ const PROJECTS = [
   },
   {
     id: "bleachquiz",
-    title: "The ImpossiBLEACH Quiz",
-    subtitle: "The ImpossiBLEACH Quiz",
-    desc: "The ImpossiBLEACH Quiz",
+    title: "That BLEACH Quiz",
+    subtitle: "That BLEACH Quiz",
+    desc: "That BLEACH Quiz",
     emoji: "🎲",
     img: "assets/images/bleachquiz.png",
     tags: ["jeu", "quiz"],
