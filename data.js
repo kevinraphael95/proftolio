@@ -93,6 +93,18 @@ const PROJECTS = [
     palette: ["#fdf4ff", "#d946ef", "#fce7f3"],
   },
   {
+    id: "jenga",
+    title: "Jenga",
+    subtitle: "Jenga",
+    desc: "Jenga test.",
+    emoji: "🪵",
+    tags: ["jeu"],
+    github: "https://github.com/kevinraphael95/jenga",
+    site: "https://kevinraphael95.github.io/jenga/",
+    status: "proof of concept",
+    palette: ["#fdf4ff", "#d946ef", "#fce7f3"],
+  },  
+  {
     id: "kevinscale",
     title: "Kévinscale",
     subtitle: "Kévinscale",
