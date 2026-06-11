@@ -163,7 +163,7 @@ const PROJECTS = [
     desc: "Pokedex test.",
     emoji: "🕹️",
     tags: ["jeu"],
-    github: "https://kevinraphael95.github.io/pokedex/",
+    github: "https://github.com/kevinraphael95/pokedex",
     site: "https://kevinraphael95.github.io/pokedex/",
     status: "proof of concept",
     palette: ["#1b2838", "#66c0f4", "#c6d4df"],
