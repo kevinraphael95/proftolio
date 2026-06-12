@@ -169,18 +169,6 @@ const PROJECTS = [
     palette: ["#1b2838", "#66c0f4", "#c6d4df"],
   },
   {
-    id: "pokmon",
-    title: "Pokmon",
-    subtitle: "Pokmon",
-    desc: "Test pokedex.",
-    emoji: "🕹️",
-    tags: ["jeu"],
-    github: "https://kevinraphael95.github.io/pokmon/",
-    site: "https://kevinraphael95.github.io/pokmon/",
-    status: "proof of concept",
-    palette: ["#1b2838", "#66c0f4", "#c6d4df"],
-  },
-  {
     id: "proftolio",
     title: "Proftolio",
     subtitle: "Proftolio",
