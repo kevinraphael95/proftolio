@@ -162,6 +162,7 @@ const PROJECTS = [
     subtitle: "Pokedex",
     desc: "Pokedex test.",
     emoji: "🕹️",
+    img: "assets/images/pokedex.png",
     tags: ["jeu"],
     github: "https://github.com/kevinraphael95/pokedex",
     site: "https://kevinraphael95.github.io/pokedex/",
