@@ -1,6 +1,19 @@
 'use strict';
 
 const PROJECTS = [
+
+  {
+    id: "asciirogue",
+    title: "Ascii rogue",
+    subtitle: "Ascii rogue",
+    desc: "Ascii rogue",
+    emoji: "👁️",
+    tags: ["jeu"],
+    github: "https://github.com/kevinraphael95/asciirogue",
+    site: "https://kevinraphael95.github.io/asciirogue/",
+    status: "proof of concept",
+    palette: ["#1a0a00", "#f5c842", "#8b0000"],
+  },  
   {
     id: "atem",
     title: "Atem",
@@ -271,4 +284,16 @@ const PROJECTS = [
     status: "proof of concept",
     palette: ["#0a0a0a", "#3b82f6", "#bfdbfe"],
   },
+  {
+    id: "ww2phrise",
+    title: "ww2phrise",
+    subtitle: "ww2phrise",
+    desc: "ww2phrise",
+    emoji: "👁️",
+    tags: ["jeu"],
+    github: "https://github.com/kevinraphael95/ww2",
+    site: "https://kevinraphael95.github.io/ww2/",
+    status: "proof of concept",
+    palette: ["#1a0a00", "#f5c842", "#8b0000"],
+  },  
 ];
