@@ -289,6 +289,7 @@ const PROJECTS = [
     subtitle: "Wikipedia → Cartes",
     desc: "Transforme un article Wikipedia aléatoire en carte Magic et Yu-Gi-Oh!",
     emoji: "🌀",
+    img: "assets/images/wikitcg.png",
     tags: ["jeu", "tcg"],
     github: "https://github.com/kevinraphael95/wikitcg",
     site: "https://kevinraphael95.github.io/wikitcg/",
