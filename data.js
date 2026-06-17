@@ -35,7 +35,7 @@ const PROJECTS = [
     tags: ["bot"],
     github: "https://github.com/kevinraphael95/atem_discord_bot",
     site: "https://kevinraphael95.github.io/atem_discord_bot/",
-    status: "alpha",
+    status: "minimum viable product",
     palette: ["#1a0a00", "#f5c842", "#8b0000"],
   },
   {
@@ -61,7 +61,7 @@ const PROJECTS = [
     tags: ["jeu"],
     github: "https://github.com/kevinraphael95/craftgame",
     site: "https://kevinraphael95.github.io/craftgame/",
-    status: "proof of concept",
+    status: "minimum viable product",
     palette: ["#1a1a2e", "#7c3aed", "#a78bfa"],
   },
   {
@@ -100,7 +100,7 @@ const PROJECTS = [
     tags: ["jeu"],
     github: "https://github.com/kevinraphael95/forest",
     site: "https://kevinraphael95.github.io/forest/",
-    status: "minimum vital product",
+    status: "minimum viable product",
     palette: ["#052e16", "#16a34a", "#bbf7d0"],
   },
   {
@@ -138,7 +138,7 @@ const PROJECTS = [
     tags: ["quizz"],
     github: "https://github.com/kevinraphael95/kevinscale",
     site: "https://kevinraphael95.github.io/kevinscale/",
-    status: "beta",
+    status: "alpha",
     palette: ["#1e1b4b", "#6366f1", "#c7d2fe"],
   },
   {
@@ -177,7 +177,7 @@ const PROJECTS = [
     tags: ["jeu"],
     github: "https://github.com/kevinraphael95/notsteam",
     site: "https://kevinraphael95.github.io/notsteam/",
-    status: "proof of concept",
+    status: "minimum viable product",
     palette: ["#1b2838", "#66c0f4", "#c6d4df"],
   },
   {
@@ -190,7 +190,7 @@ const PROJECTS = [
     tags: ["jeu"],
     github: "https://github.com/kevinraphael95/pokedex",
     site: "https://kevinraphael95.github.io/pokedex/",
-    status: "proof of concept",
+    status: "minimum viable product",
     palette: ["#1b2838", "#66c0f4", "#c6d4df"],
   },
   {
@@ -305,7 +305,7 @@ const PROJECTS = [
     tags: ["jeu"],
     github: "https://github.com/kevinraphael95/ww2",
     site: "https://kevinraphael95.github.io/ww2/",
-    status: "proof of concept",
+    status: "proof of value",
     palette: ["#1a0a00", "#f5c842", "#8b0000"],
   },  
 ];
