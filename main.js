@@ -2,14 +2,13 @@
 
 // ── STATUS ──────────────────────────────────────────────────
 const STATUS_MAP = {
-  "fonctionnel":          { cls: "s-ok",    label: "OK" },
-  "beta":                 { cls: "s-beta",  label: "Beta" },
-  "alpha":                { cls: "s-alpha", label: "Alpha" },
-  "en travaux":           { cls: "s-wip",   label: "WIP" },
-  "test":                 { cls: "s-wip",   label: "Test" },
-  "proof of concept":     { cls: "s-poc",   label: "Proof of Concept" },
-  "minimum viable product":{ cls: "s-mvp",   label: "Minimum Viable Product" },
-  "abandonné":            { cls: "s-dead",  label: "Abandonné" },
+  "fonctionnel":              { cls: "s-ok",    label: "OK" },
+  "beta":                     { cls: "s-beta",  label: "Beta" },
+  "alpha":                    { cls: "s-alpha", label: "Alpha" },
+  "proof of value":           { cls: "s-poc",   label: "Proof of Value" },
+  "minimum viable product":   { cls: "s-mvp",   label: "Minimum Viable Product" },
+  "proof of concept":         { cls: "s-poc",   label: "Proof of Concept" },  
+  "abandonné":                { cls: "s-dead",  label: "Abandonné" },
 };
 
 // ── THUMB CANVAS ────────────────────────────────────────────
