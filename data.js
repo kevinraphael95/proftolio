@@ -290,6 +290,7 @@ const PROJECTS = [
     subtitle: "ww2frise",
     desc: "ww2frise",
     emoji: "👁️",
+    img: "assets/images/ww2frise.png",
     tags: ["jeu"],
     github: "https://github.com/kevinraphael95/ww2",
     site: "https://kevinraphael95.github.io/ww2/",
