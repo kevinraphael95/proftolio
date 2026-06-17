@@ -1,11 +1,14 @@
 'use strict';
 
+
 /* ETAT D'AVANCEMENT
-POC proof of concept, est-ce possible
-POV proof of value, est-ce utile
-MVP minimum viable product, est-ce que ça marche vraiment
-ALPHA alpha, la majorité des fonctions sont ajoutées
-BETA beta, la majorité des fonctions sont ajoutées et les principaux bugs ont été corrigé
+"abandonné"
+POC "proof of concept", est-ce possible
+POV "proof of value", est-ce utile
+MVP "minimum viable product", est-ce que ça marche vraiment
+ALPHA "alpha", la majorité des fonctions sont ajoutées
+BETA "beta", la majorité des fonctions sont ajoutées et les principaux bugs ont été corrigé
+"fonctionnel"
 */
 
 const PROJECTS = [
