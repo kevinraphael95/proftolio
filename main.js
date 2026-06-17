@@ -8,7 +8,7 @@ const STATUS_MAP = {
   "en travaux":           { cls: "s-wip",   label: "WIP" },
   "test":                 { cls: "s-wip",   label: "Test" },
   "proof of concept":     { cls: "s-poc",   label: "Proof of Concept" },
-  "minimum vital product":{ cls: "s-mvp",   label: "Minimum Viable Product" },
+  "minimum viable product":{ cls: "s-mvp",   label: "Minimum Viable Product" },
   "abandonné":            { cls: "s-dead",  label: "Abandonné" },
 };
 
