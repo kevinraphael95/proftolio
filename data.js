@@ -277,6 +277,7 @@ const PROJECTS = [
     subtitle: "Wikipop",
     desc: "Wikipedia Popularity Game !",
     emoji: "🌀",
+    img: "assets/images/wikipop.png",
     tags: ["jeu"],
     github: "https://github.com/kevinraphael95/wikipop",
     site: "https://kevinraphael95.github.io/wikipop/",
