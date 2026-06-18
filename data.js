@@ -281,7 +281,7 @@ const PROJECTS = [
     tags: ["jeu"],
     github: "https://github.com/kevinraphael95/wikipop",
     site: "https://kevinraphael95.github.io/wikipop/",
-    status: "proof of concept",
+    status: "proof of value",
     palette: ["#0a0a0a", "#3b82f6", "#bfdbfe"],
   },
   {
