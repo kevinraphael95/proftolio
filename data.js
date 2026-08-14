@@ -83,7 +83,7 @@ const PROJECTS = [
     subtitle: "Dessine moi une forme",
     desc: "Dessine moi une forme",
     emoji: "🖊️",
-    img: "assets/images/drawword.png",
+    img: "assets/images/dessinemoiuneforme.png",
     tags: ["jeu"],
     github: "https://github.com/kevinraphael95/dessine.moi.une.forme",
     site: "https://kevinraphael95.github.io/dessine.moi.une.forme/",
