@@ -309,18 +309,6 @@ const PROJECTS = [
     palette: ["#ffcb05", "#3b4cca", "#cc0000"],
   },
   {
-    id: "wikihub",
-    title: "wikihub",
-    subtitle: "wikihub",
-    desc: "wikihub",
-    emoji: "🌀",
-    tags: ["jeu", "tcg"],
-    github: "https://github.com/kevinraphael95/wikihub",
-    site: "https://kevinraphael95.github.io/wikihub/",
-    status: "proof of concept",
-    palette: ["#0a0a0a", "#3b82f6", "#bfdbfe"],
-  },
-  {
     id: "wikipop",
     title: "WikiPop",
     subtitle: "Wikipop",
